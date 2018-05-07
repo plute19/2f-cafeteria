@@ -1,0 +1,275 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/wrapper">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100"
+        android:orientation="vertical"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_bottom_16dp"
+                    android:text="@string/main_title"
+                    android:theme="@style/text_center_36sp"
+                    android:layout_weight="3"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/hamster_main"/>
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="10dp"
+                android:onClick="calendarToggle"/>
+
+            <CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="calendarSizeToggle">
+            </CalendarView>
+
+
+
+            <TextView
+                android:id="@+id/card_today_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_bottom_16dp"
+                android:text="@string/card_today"
+                android:theme="@style/text_center_24sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    style="@style/text_center_18sp"
+                    android:text="메뉴명"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    style="@style/text_center_18sp"
+                    android:text="메뉴&#10;인기도"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    style="@style/text_center_18sp"
+                    android:textSize="15sp"
+                    android:text="카테고리&#10;인기도"/>
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    style="@style/text_center_18sp"
+                    android:text="평가 참여"/>
+            </LinearLayout>
+            <TableLayout
+                android:id="@+id/table_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="6">
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/card_this_week_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_bottom_16dp"
+                    android:text="@string/card_this_week"
+                    android:theme="@style/text_center_24sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_mon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/week_monday_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_bottom_8dp"
+                        android:text="@string/monday"
+                        android:theme="@style/text_center_18sp" />
+                    <TableLayout
+                        android:id="@+id/table_mon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="4">
+                    </TableLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_tue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/week_tuesday_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_bottom_8dp"
+                        android:text="@string/tuesday"
+                        android:theme="@style/text_center_18sp" />
+                    <TableLayout
+                        android:id="@+id/table_tue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="4">
+                    </TableLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_wed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/week_wednesday_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_bottom_8dp"
+                        android:text="@string/wednesday"
+                        android:theme="@style/text_center_18sp" />
+                    <TableLayout
+                        android:id="@+id/table_wed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4">
+                    </TableLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_thu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/week_thursday_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_bottom_8dp"
+                        android:text="@string/thursday"
+                        android:theme="@style/text_center_18sp" />
+                    <TableLayout
+                        android:id="@+id/table_thu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4">
+                    </TableLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_fri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/week_friday_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_bottom_8dp"
+                        android:text="@string/friday"
+                        android:theme="@style/text_center_18sp" />
+                    <TableLayout
+                        android:id="@+id/table_fri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4">
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#3cffe7e7"
+                android:paddingVertical="10dp">
+                <Button
+                    android:id="@+id/signInOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="로그인"
+                    android:onClick="signInOut"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Designed by HINDOONG Corporation"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="문의 사항 -> plute19@gmail.com"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="* 식단표 업데이트는 매주 월요일 점심 즈음에 합니다."
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

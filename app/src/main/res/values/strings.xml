@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">햄스터 2층 식당</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+
+    <string name="google_title_text">Google 계정으로 로그인 후\n이용할 수 있습니다.</string>
+
+    <!-- 이하 앱 전용... -->
+    <string name="main_title">햄스터 2층 식당</string>
+    <string name="card_today">오늘의 식단표</string>
+    <string name="card_this_week">금주의 식단표</string>
+
+    <string name="monday">월요일</string>
+    <string name="tuesday">화요일</string>
+    <string name="wednesday">수요일</string>
+    <string name="thursday">목요일</string>
+    <string name="friday">금요일</string>
+
+    <string name="url">https://hindoong.me/cafeteria/</string>
+
+
+</resources>

@@ -1,0 +1,71 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/wrapper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bottom_16dp"
+            android:text="@string/main_title"
+            android:theme="@style/text_center_36sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신규 메뉴 등록"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:weightSum="6">
+            <EditText
+                android:id="@+id/et_menuname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@color/colorAccent"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="10dp"
+                android:hint="메뉴명을 입력하세요"/>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+            </Spinner>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메뉴 등록"
+            android:textSize="30sp"
+            android:onClick="insertMenu"/>
+
+        <Button
+            android:id="@+id/bt_goAddMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메뉴 추가로 이동"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

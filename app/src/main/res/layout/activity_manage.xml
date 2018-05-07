@@ -1,0 +1,97 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/wrapper">
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="@color/grey_100"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_bottom_16dp"
+                android:text="@string/main_title"
+                android:theme="@style/text_center_36sp"/>
+
+            <TextView
+                android:id="@+id/card_today_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_bottom_16dp"
+                android:text="관리자 페이지"
+                android:theme="@style/text_center_24sp" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="10dp"
+                android:onClick="calendarToggle"/>
+
+            <CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="calendarSizeToggle">
+            </CalendarView>
+
+            <TableLayout
+                android:id="@+id/tl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/bt_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추가"
+                    android:layout_marginHorizontal="20dp"/>
+                <Button
+                    android:id="@+id/bt_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="저장"
+                    android:layout_marginHorizontal="20dp"
+                    android:onClick="confirmMenu"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_goMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메인으로 이동"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
